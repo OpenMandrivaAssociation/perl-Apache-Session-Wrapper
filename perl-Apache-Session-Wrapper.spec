@@ -1,6 +1,6 @@
 %define module  Apache-Session-Wrapper
 %define name    perl-%{module}
-%define version 0.31
+%define version 0.33
 %define release %mkrel 1
 
 Name:           %{name}
