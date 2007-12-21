@@ -15,6 +15,7 @@ BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Apache::Session)
 BuildRequires:  perl(Apache::Test)
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This module is a simple wrapper around Apache::Session which
