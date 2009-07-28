@@ -1,21 +1,21 @@
-%define module  Apache-Session-Wrapper
-%define name    perl-%{module}
-%define version 0.33
-%define release %mkrel 3
+%define upstream_name    Apache-Session-Wrapper
+%define upstream_version 0.33
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           perl-%{upstream_name}
+Version:        %perl_convert_version %{upstream_version}
+Release:        %mkrel 1
+
 Summary:        A simple wrapper around Apache::Session
-License:        GPL or Artistic
+License:        GPL+ or Artistic
 Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Apache/%{module}-%{version}.tar.bz2
+Url:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Apache::Session)
 BuildRequires:  perl(Apache::Test)
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module is a simple wrapper around Apache::Session which
@@ -28,14 +28,14 @@ take a look at "MasonX::Request::WithApacheSession" first,  which
 integrates this module directly into Mason.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
 ./Build CFLAGS="%{optflags}"
 
 %check
-./Build test
+./Build test </dev/null
 
 %install
 rm -rf %{buildroot}
@@ -48,4 +48,3 @@ rm -rf %{buildroot}
 %doc Changes LICENSE README SIGNATURE
 %{perl_vendorlib}/Apache
 %{_mandir}/man3/*
-
