@@ -1,5 +1,5 @@
 %define upstream_name    Apache-Session-Wrapper
-%define upstream_version 0.33
+%define upstream_version 0.34
 
 Name:           perl-%{upstream_name}
 Version:        %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:        A simple wrapper around Apache::Session
 License:        GPL+ or Artistic
 Group:          Development/Perl
 Url:            http://search.cpan.org/dist/%{upstream_name}
-Source0:        http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:        http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Apache::Session)
