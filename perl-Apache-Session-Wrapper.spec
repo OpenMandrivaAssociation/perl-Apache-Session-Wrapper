@@ -3,7 +3,7 @@
 
 Name:           perl-%{upstream_name}
 Version:        %perl_convert_version %{upstream_version}
-Release:        %mkrel 2
+Release:        3
 
 Summary:        A simple wrapper around Apache::Session
 License:        GPL+ or Artistic
