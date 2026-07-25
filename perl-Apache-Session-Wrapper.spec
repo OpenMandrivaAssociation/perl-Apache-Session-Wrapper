@@ -2,14 +2,14 @@
 %define upstream_version 0.34
 
 Name:           perl-%{upstream_name}
-Version:        %perl_convert_version %{upstream_version}
-Release:        4
+Version:        %{upstream_version}
+Release:        5
 
 Summary:        A simple wrapper around Apache::Session
 License:        GPL+ or Artistic
 Group:          Development/Perl
-Url:            https://search.cpan.org/dist/%{upstream_name}
-Source0:        http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.gz
+Url:            https://metacpan.org/dist/Apache-Session-Wrapper
+Source0:        https://cpan.metacpan.org/authors/id/Y/YV/YVES/Apache-Session-Wrapper-%{upstream_version}.tar.gz
 
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Apache::Session)
@@ -87,7 +87,7 @@ rm -rf %{buildroot}
 * Tue May 30 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.28-1mdv2007.0
 - New release 0.28
 
-* Thu Apr 27 2006 Nicolas Lécureuil <neoclust@mandriva.org> 0.26-2mdk
+* Thu Apr 27 2006 Nicolas Lï¿½cureuil <neoclust@mandriva.org> 0.26-2mdk
 - Fix SPEC according to Perl Policy
     - Source URL
     - BuildRequires
