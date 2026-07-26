@@ -1,15 +1,13 @@
 %define upstream_name    Apache-Session-Wrapper
-%define upstream_version 0.34
-
 Name:           perl-%{upstream_name}
-Version:        %{upstream_version}
-Release:        5
+Version:        0.34
+Release:        6
 
 Summary:        A simple wrapper around Apache::Session
 License:        GPL+ or Artistic
 Group:          Development/Perl
 Url:            https://metacpan.org/dist/Apache-Session-Wrapper
-Source0:        https://cpan.metacpan.org/authors/id/Y/YV/YVES/Apache-Session-Wrapper-%{upstream_version}.tar.gz
+Source0:        https://cpan.metacpan.org/authors/id/Y/YV/YVES/Apache-Session-Wrapper-%{version}.tar.gz
 
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Apache::Session)
@@ -28,7 +26,7 @@ take a look at "MasonX::Request::WithApacheSession" first,  which
 integrates this module directly into Mason.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -61,9 +59,7 @@ rm -rf %{buildroot}
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.330.0-1mdv2010.0
 + Revision: 402093
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.33-3mdv2009.0
+- rebuild using %0.34 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.33-3mdv2009.0
 + Revision: 241148
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
