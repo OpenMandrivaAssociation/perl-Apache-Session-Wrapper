@@ -2,7 +2,7 @@
 %define upstream_version 0.34
 Name:           perl-%{upstream_name}
 Version:	0.34
-Release:	2
+Release:	3
 
 Summary:        A simple wrapper around Apache::Session
 License:        GPL+ or Artistic
