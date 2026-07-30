@@ -1,13 +1,14 @@
 %define upstream_name    Apache-Session-Wrapper
+%define upstream_version 0.34
 Name:           perl-%{upstream_name}
-Version:        0.34
-Release:        6
+Version:	0.34
+Release:	1
 
 Summary:        A simple wrapper around Apache::Session
 License:        GPL+ or Artistic
 Group:          Development/Perl
 Url:            https://metacpan.org/dist/Apache-Session-Wrapper
-Source0:        https://cpan.metacpan.org/authors/id/Y/YV/YVES/Apache-Session-Wrapper-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/Y/YV/YVES/Apache-Session-Wrapper-0.34.tar.gz
 
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Apache::Session)
